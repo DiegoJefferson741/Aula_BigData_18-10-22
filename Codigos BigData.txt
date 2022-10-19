@@ -1,0 +1,33 @@
+ls
+cd Downloads
+ls
+hadoop fs -ls
+
+rmdir -R out //remove diretorios
+
+
+
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar wordcount
+
+
+hadoop fs -copyFromLocal big.txt
+hadoop fs -ls
+
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar wordcount big.txt out
+
+hadoop fs -ls out
+
+hadoop fs -copyToLocal out
+
+
+
+
+
+
+
+
+
+
+
+
+
